@@ -1,0 +1,40 @@
+.logoSerch{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 36px;
+    padding-right: 10px;
+}
+
+
+.serchInput{
+    
+    background-color: white;
+    width: 500px;
+    height: 40px;
+}
+
+.serchButton{
+    
+    background-color: aqua;
+    width: 46px;
+    height: 46px;
+    margin-right: 200px;
+}
+
+.menu{
+    display:inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.menuDiv{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
