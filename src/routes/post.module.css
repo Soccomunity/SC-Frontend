@@ -1,0 +1,45 @@
+.nameInput{
+    background-color: white;
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.postInput{
+    width: 800px;
+    height: 300px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    resize: none;
+}
+
+.postDiv{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.postBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cancel{
+    width: 80px;
+    height: 40px;
+    background-color: dimgray;
+    margin: 10px;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.check{
+    width: 80px;
+    height: 40px;
+    background-color:aqua;
+    margin: 10px;
+    border-radius: 5px;
+    border-color: aqua;
+}

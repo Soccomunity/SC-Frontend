@@ -1,25 +1,48 @@
-import styles from "./Home.module.css";
+import Menu from "../components/menu"
+import styles from "./Home.module.css"
+import {Link} from "react-router-dom";
+import { firestore } from '../firebase';
+import { useEffect } from 'react';
+
 
 function Home(){
+      
+      useEffect(() => {
+        const post = firestore.collection("post");
+        
+        post.doc("post-item").get().then((doc)=>{
+            console.log(doc.data());
+            console.log(doc.id);
+            
+          })
+      });
+     
     return (
         <div>
+            <Menu/>
+            <div className={styles.listDiv}>
+            <ul className={styles.list}>
+            <li>
+                <a className={styles.listItem}>
+                <p className={styles.itemName}>제목</p>
+                <span className={styles.itmeTime}>작성 시간</span>
+                </a>
+            </li>
 
-        
-        <div className={styles.logoSerch}>
-            <a className={styles.logo}> Soccomunity</a>
-           <input className={styles.serchInput} type="text" placeholder="글 검색"></input>
-            <button className={styles.serchButton}>검색</button>
-
+            <li>
+                <a className={styles.listItem}>
+                <p className={styles.itemName}>ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㄹㄴㅁ</p>
+                <span className={styles.itmeTime}>09:00</span>
+                </a>
+            </li>
             
-        </div>
-        <div className={styles.menuDiv}>
-        <a className={styles.menu}>게시글</a>
-        <a className={styles.menu}>해외축구</a>
-        <a className={styles.menu}>국내축구</a>
+
+        </ul>
         
-        </div>
-        <hr></hr>
-        </div>
+            </div>
+            <Link to="/post"><button className={styles.plusBtn}>+</button></Link>
+            </div>
+        
     );
 }
 
