@@ -32,14 +32,18 @@
     margin: 10px;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
     
 }
 
 .check{
+    
     width: 80px;
     height: 40px;
-    background-color:aqua;
     margin: 10px;
+    background-color:aqua;
     border-radius: 5px;
     border-color: aqua;
+    cursor: pointer;
+    
 }

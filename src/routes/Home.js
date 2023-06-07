@@ -1,21 +1,13 @@
 import Menu from "../components/menu"
 import styles from "./Home.module.css"
 import {Link} from "react-router-dom";
-import { firestore } from '../firebase';
-import { useEffect } from 'react';
+
+
 
 
 function Home(){
       
-      useEffect(() => {
-        const post = firestore.collection("post");
-        
-        post.doc("post-item").get().then((doc)=>{
-            console.log(doc.data());
-            console.log(doc.id);
-            
-          })
-      });
+      
      
     return (
         <div>

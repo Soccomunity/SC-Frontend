@@ -1,0 +1,30 @@
+.centerDiv{
+    padding: 100px 0px;
+}
+
+.loginDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.login{
+    color: black;
+}
+
+.Input{
+width:250px;
+height: 40px;
+margin: 10px;
+border-color: aqua;
+border-radius: 10px;
+}
+
+.loginBtn{
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-color: aqua;
+    cursor: pointer;
+}

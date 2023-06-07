@@ -1,19 +1,20 @@
 .logoSerch{
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    
+    cursor: pointer;
 }
 
 .logo{
     font-weight: bold;
     font-size: 36px;
     padding-right: 10px;
+    
+    color: black;
 }
 
 
 .serchInput{
-    
     background-color: white;
     width: 500px;
     height: 40px;
@@ -29,12 +30,14 @@
     width: 46px;
     height: 46px;
     margin-right: 200px;
+    cursor: pointer;
 }
 
 .menu{
     display:inline-block;
     padding-left: 50px;
     padding-right: 50px;
+    color: black;
 }
 
 .menuDiv{
@@ -45,4 +48,29 @@
 
 .menuLine{
     width: 1200px;
+}
+
+.loginBtn{
+    
+    width: 100px;
+    background-color: aqua;
+    border-color: aqua;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.joinBtn{
+    width: 100px;
+    background-color:gray;
+    border-color: gray;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.loginDiv{
+    display: flex;
+    justify-content:right;
 }
