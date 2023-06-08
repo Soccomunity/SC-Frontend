@@ -1,14 +1,38 @@
 import { Link } from "react-router-dom";
 import style from "./Menu.module.css";
+import { useEffect, useState } from "react";
+import { authService } from "../firebase";
 
 
-function menu(){
+function Menu(){
+    const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
+    console.log(isLoggedIn);
+    const [loggedInFlag,setLoggedInFlag] = useState(false);
+
+    useEffect(()=>{
+        authService.onAuthStateChanged (user=>{
+            if(user){
+                setLoggedInFlag(true);
+                
+              } else {
+                setLoggedInFlag(false);
+              }
+              
+        })
+        console.log(loggedInFlag);
+    },[])
+    const logout = () =>{
+        alert("로그아웃 되었습니다.")
+        authService.signOut();
+    }
+   
     return (
         <div>
-        <div className={style.loginDiv}>
-        <Link to={"/login"}><button className={style.loginBtn}>로그인</button></Link>
-        <Link to={"/join"} ><button className={style.joinBtn}>회원가입</button></Link>
-        </div>
+            <div className={style.loginDiv}>
+            <Link to={"/login"}><button hidden={loggedInFlag} className={style.loginBtn}>로그인</button></Link>
+            <Link to={"/join"} ><button hidden={loggedInFlag} className={style.joinBtn}>회원가입</button></Link>
+            <Link to={"/"} ><button hidden={!loggedInFlag} onClick={logout} className={style.joinBtn}>로그아웃</button></Link>
+            </div>
         <div>
 
         <div className={style.logoSerch}>
@@ -31,4 +55,4 @@ function menu(){
     );
 }
 
-export default menu;
+export default Menu;

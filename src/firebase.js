@@ -1,21 +1,22 @@
-// firebaseInstance.js
-import firebase from 'firebase';
-import 'firebase/auth';
-import 'firebase/firestore';
-import 'firebaseInstance/storage';
+import firebase from "firebase/compat/app"
+import "firebase/compat/auth"
+import { initializeApp } from "firebase/app"
+import { getFirestore } from "@firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGIN_ID,
-  appId: process.env.REACT_APP_APP_ID,
-};
+  apiKey: "AIzaSyDcX9KqLxHtVwgQGjVhRGvSbbYql3e4Wbk",
+  authDomain: "soccomunity-54d04.firebaseapp.com",
+  projectId: "soccomunity-54d04",
+  storageBucket: "soccomunity-54d04.appspot.com",
+  messagingSenderId: "986135406835",
+  appId: "1:986135406835:web:26f87308aea881e5722f86",
+  measurementId: "G-G3WRZ70TJE" 
+}
 
-firebase.initializeApp(firebaseConfig);
+// firebaseConfig 정보로 firebase 시작
+firebase.initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig)
 
-export const firebaseInstance = firebase;
-export const authService = firebase.auth();
-export const dbService = firebase.firestore();
-export const storageService = firebase.storage();
+export const authService = firebase.auth() // 로그인 모듈
+export const firebaseInstance = firebase // 소셜로그인
+export const db = getFirestore(app) // DB 정보
