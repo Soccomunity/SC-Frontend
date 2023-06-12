@@ -9,7 +9,7 @@ function Join(){
     
     const [email, setEmail] =  useState("");
     const [password, setPassword] = useState("");
-    const [newAccount, setNewAccount] = useState(true); // 새로운 유저인지 확인(초기값: true)
+    
     
       const onChange = (event) => {
         const {
@@ -40,7 +40,7 @@ function Join(){
     }
 
       const onSubmit = async (event) => {
-        console.log(newAccount)
+        
         
         try {
           let data
