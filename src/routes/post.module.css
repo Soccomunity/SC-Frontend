@@ -3,6 +3,8 @@
     width: 500px;
     height: 40px;
     border-radius: 5px;
+    border: 0;
+    background-color: #f6f6f6;
 }
 
 .postInput{
@@ -11,6 +13,8 @@
     border-radius: 5px;
     word-wrap: break-word;
     resize: none;
+    border: 0;
+    background-color: #f6f6f6;
 }
 
 .postDiv{
@@ -41,9 +45,9 @@
     width: 80px;
     height: 40px;
     margin: 10px;
-    background-color:aqua;
+    background-color:#f6f6f6;
     border-radius: 5px;
-    border-color: aqua;
+    border-color: #f6f6f6;
     cursor: pointer;
     
 }

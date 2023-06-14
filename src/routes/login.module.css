@@ -14,17 +14,18 @@
 width:250px;
 height: 40px;
 margin: 10px;
-border-color: aqua;
+border: 0;
 border-radius: 10px;
+background-color: #f6f6f6;
 }
 
 .loginBtn{
     width: 100px;
     height: 30px;
-    background-color: aqua;
+    background-color: #f6f6f6;
     margin-top: 30px;
     border-radius: 10px;
-    border-color: aqua;
+    border-color: #f6f6f6;
     cursor: pointer;
 }
 .centerDiv{
