@@ -27,28 +27,25 @@ function Menu(){
     }
    
     return (
-        <div>
-            <div className={style.loginDiv}>
-            <Link to={"/login"}><button hidden={loggedInFlag} className={style.loginBtn}>로그인</button></Link>
-            <Link to={"/join"} ><button hidden={loggedInFlag} className={style.joinBtn}>회원가입</button></Link>
-            <Link to={"/"} ><button hidden={!loggedInFlag} onClick={logout} className={style.joinBtn}>로그아웃</button></Link>
-            </div>
-        <div>
-
-        <div className={style.logoSerch}>
-        <Link to={"/"} style={{ textDecoration: 'none' }}><a className={style.logo}> Soccomunity</a></Link>
-        <input className={style.serchInput} type="text" placeholder="글 검색"></input>
-            <button className={style.serchButton}>검색</button>
-
-            
-        </div>
         <div className={style.menuDiv}>
-        <Link to={"/"}><a className={style.menu}>게시글</a></Link>
-        <Link to={"/"}><a className={style.menu}>해외축구</a></Link>
-        <Link to={"/"}><a className={style.menu}>국내축구</a></Link>
-        </div>
-        <hr className={style.menuLine}></hr>
-        </div>
+        
+            
+        <Link to={"/"} style={{ textDecoration: 'none' }}><span className={style.logo}> soccomunity</span></Link>
+        <ul className={style.menuList}>
+            <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  홈</li></Link>
+            <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  해외축구</li></Link>
+            <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  국내축구</li></Link>
+        </ul>
+        
+        
+        
+        <div className={style.loginDiv}>
+            <Link to={"/login"} style={{ textDecoration: 'none' }}><span hidden={loggedInFlag} className={style.loginBtn}>로그인</span></Link>
+            <Link to={"/join"} style={{ textDecoration: 'none' }} ><span hidden={loggedInFlag} className={style.joinBtn}>회원가입</span></Link>
+            <Link to={"/"} style={{ textDecoration: 'none' }}><span hidden={!loggedInFlag} onClick={logout} className={style.joinBtn}>로그아웃</span></Link>
+            <Link to={"/myPage"} style={{ textDecoration: 'none' }}><span hidden={!loggedInFlag} className={style.joinBtn}>마이페이지</span></Link>
+            </div>
+        
         </div>
         
         

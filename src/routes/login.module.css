@@ -3,6 +3,7 @@
 .loginDiv{
     display: flex;
     justify-content: center;
+    
 }
 
 .login{
@@ -25,4 +26,14 @@ border-radius: 10px;
     border-radius: 10px;
     border-color: aqua;
     cursor: pointer;
+}
+.centerDiv{
+    display: flex;
+    
+}
+
+
+.mainDiv{
+    margin-top: 50px;
+    width: 100%;
 }

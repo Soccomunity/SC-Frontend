@@ -47,3 +47,13 @@
     cursor: pointer;
     
 }
+
+.mainDiv{
+    display: flex;
+}
+.pDiv{
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: center;
+}

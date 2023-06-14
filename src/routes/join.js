@@ -62,7 +62,9 @@ function Join(){
     return (
         
         <div className={style.centerDiv}>
-            <Menu/>
+          <div><Menu/></div>
+            
+            <div className={style.mainDiv}>
             <div className={style.loginDiv}>
             <h1 className={style.login}>JOIN</h1>
             </div>
@@ -75,7 +77,7 @@ function Join(){
             <div className={style.loginDiv}>
             <button className={style.loginBtn} onClick={() => {onSubmit()}}>회원가입</button>
             </div>
-            
+            </div>
             
         </div>
     );

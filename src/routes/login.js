@@ -43,7 +43,10 @@ const onSubmit = async (event) => {
 
 return (
     <div className={style.centerDiv}>
+        <div>
         <Menu/>
+        </div>
+        <div className={style.mainDiv}>
         <div className={style.loginDiv}>
         <h1 className={style.login}>LOGIN</h1>
         </div>
@@ -56,7 +59,7 @@ return (
         <div className={style.loginDiv}>
        <button className={style.loginBtn} onClick={onSubmit}>로그인</button>
         </div>
-        
+        </div>
         
     </div>
 );

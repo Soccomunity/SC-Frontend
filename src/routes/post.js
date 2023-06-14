@@ -4,10 +4,16 @@ import styles from "./post.module.css"
 import { useEffect, useId, useState } from "react";
 import { addDoc, collection, doc, getDocs, setDoc } from "firebase/firestore";
 import { db } from "../firebase";
+import { getAuth } from "firebase/auth";
 
 function Post(){
-
-
+    const auth = getAuth();
+    const user = auth.currentUser;
+    let email;
+    if(user !== null ){
+     email = user.email;
+    }
+   
     let totime = new Date();   
 
     let hours = totime.getHours(); // 시
@@ -43,15 +49,17 @@ function Post(){
     },[])
   
     const createUsers = async () =>{
-      await setDoc(doc(usersCollectionRef,`user${time}`),{title: newTitle, post:newPost, day:day, time: time});
+      await setDoc(doc(usersCollectionRef,`user${time}`),{title: newTitle, post:newPost, day:day, time: time, email: email});
       console.log(newTitle, newPost);
     }
 
 
     return(
-        <div>
-        <Menu/>
+        <div className={styles.mainDiv}>
+          <div><Menu/></div>
         
+        <div className={styles.pDiv}>
+          <div>
         <div className={styles.postDiv}>
         <input className={styles.nameInput} onChange={(event)=> {setNewTitle(event.target.value)}} type="text" placeholder="제목"></input>
         </div>
@@ -62,7 +70,8 @@ function Post(){
         <Link to="/"><button className={styles.cancel} >취소</button></Link>
         <Link to="/"><button className={styles.check} onClick={createUsers}>등록</button></Link>
         </div>
-        
+        </div>
+        </div>
         </div>
     );
 }
