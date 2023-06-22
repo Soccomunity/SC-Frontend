@@ -68,7 +68,7 @@ function Home() {
                 </ul>
 
             </div>
-            <Link to="/post"><button hidden={!loggedInFlag} className={styles.plusBtn}>+</button></Link>
+            
         </div>
 
 

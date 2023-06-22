@@ -35,6 +35,7 @@ function Menu() {
                 <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  홈</li></Link>
                 <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  해외축구</li></Link>
                 <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  국내축구</li></Link>
+                <Link to={"/post"} style={{ textDecoration: 'none' }}><li className={style.menu}>  글 쓰기</li></Link>
             </ul>
 
 
