@@ -26,15 +26,16 @@ function Menu() {
         authService.signOut();
     }
 
+    const url = "https://sports.news.naver.com/wfootball/record/index?category=epl&year=2022&tab=team"
+    const kurl = "https://sports.news.naver.com/kfootball/record/index"
+
     return (
         <div className={style.menuDiv}>
-
-
             <Link to={"/"} style={{ textDecoration: 'none' }}><span className={style.logo}> soccomunity</span></Link>
             <ul className={style.menuList}>
                 <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  홈</li></Link>
-                <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  해외축구</li></Link>
-                <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  국내축구</li></Link>
+                <li className={style.menu} onClick={()=> window.open(url)} style={{cursor:'pointer'}}>  해외축구</li>
+                <li className={style.menu} onClick={()=> window.open(kurl)} style={{cursor:'pointer'}}>  국내축구</li>
                 <Link to={"/post"} style={{ textDecoration: 'none' }}><li className={style.menu}>  글 쓰기</li></Link>
             </ul>
 
