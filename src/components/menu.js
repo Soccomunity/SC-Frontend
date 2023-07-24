@@ -30,7 +30,7 @@ function Menu() {
     const kurl = "https://sports.news.naver.com/kfootball/record/index"
 
     return (
-        <div className={style.menuDiv}>
+        <div  className={style.menuDiv}>
             <Link to={"/"} style={{ textDecoration: 'none' }}><span className={style.logo}> soccomunity</span></Link>
             <ul className={style.menuList}>
                 <Link to={"/"} style={{ textDecoration: 'none' }}><li className={style.menu}>  홈</li></Link>
